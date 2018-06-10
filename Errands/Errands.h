@@ -2,7 +2,7 @@
 //  Copyright © 2018 Lukasz Warchol. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Foundation;
 
 //! Project version number for Errands.
 FOUNDATION_EXPORT double ErrandsVersionNumber;
