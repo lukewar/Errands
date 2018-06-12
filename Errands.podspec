@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Errands"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.source       = { :git => "https://github.com/lukewar/Errands.git", :tag => "#{s.version}" }
   s.summary      = "A nice way of running sequential tasks."
   s.description  = "µ-library with aim on simplyfing asynchronous sequential operations."
