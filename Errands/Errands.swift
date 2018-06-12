@@ -4,13 +4,15 @@
 
 import Foundation
 
-typealias DoneClosure<T> = (T) -> Void
-typealias OperationClosure<T, U> = (T, @escaping DoneClosure<U>) -> Void
+public typealias DoneClosure<T> = (T) -> Void
+public typealias OperationClosure<T, U> = (T, @escaping DoneClosure<U>) -> Void
 
-class Errands {
+public class Errands {
     fileprivate var anchorTask: Task<Void, Void>?
 
-    func first<O>(_ operation: @escaping (@escaping DoneClosure<O>) -> Void) -> Task<Void, O> {
+    public init() {}
+
+    public func first<O>(_ operation: @escaping (@escaping DoneClosure<O>) -> Void) -> Task<Void, O> {
         guard anchorTask == nil else {
             preconditionFailure("Errands setup more than once.")
         }
@@ -26,7 +28,7 @@ class Errands {
     }
 }
 
-class Task<I, O> {
+public class Task<I, O> {
     let operation: OperationClosure<I, O>
 
     private(set) var errands: Errands?
@@ -38,7 +40,7 @@ class Task<I, O> {
         completion = nil
     }
 
-    func then<T>(_ operation: @escaping OperationClosure<O, T>) -> Task<O, T> {
+    public func then<T>(_ operation: @escaping OperationClosure<O, T>) -> Task<O, T> {
         guard let errands = self.errands else {
             preconditionFailure("Errands already run.")
         }
@@ -68,7 +70,7 @@ class Task<I, O> {
         operation(input, completion)
     }
 
-    func finally(_ completion: @escaping DoneClosure<Void>) {
+    public func finally(_ completion: @escaping DoneClosure<Void>) {
         guard let errands = self.errands else {
             preconditionFailure("Errands already completed.")
         }
