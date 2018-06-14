@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B4288F9D20CD6A8F002FCDFC /* Errands.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4288F9320CD6A8F002FCDFC /* Errands.framework */; };
-		B4288FA420CD6A8F002FCDFC /* Errands.h in Headers */ = {isa = PBXBuildFile; fileRef = B4288F9620CD6A8F002FCDFC /* Errands.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4288FAE20CD6AE8002FCDFC /* Errands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4288FAD20CD6AE8002FCDFC /* Errands.swift */; };
-		B4288FB120CD6C83002FCDFC /* ErrandsMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4288FAF20CD6C82002FCDFC /* ErrandsMemoryTests.swift */; };
-		B4288FB220CD6C83002FCDFC /* ErrandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4288FB020CD6C83002FCDFC /* ErrandsTests.swift */; };
+		B497DE2E20D2B3A2009D120B /* Errands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497DE2B20D2B3A2009D120B /* Errands.swift */; };
+		B497DE2F20D2B3A2009D120B /* Errands.h in Headers */ = {isa = PBXBuildFile; fileRef = B497DE2C20D2B3A2009D120B /* Errands.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B497DE3820D2B959009D120B /* ErrandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497DE3420D2B959009D120B /* ErrandsTests.swift */; };
+		B497DE3920D2B959009D120B /* ErrandsMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497DE3520D2B959009D120B /* ErrandsMemoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,13 +26,14 @@
 
 /* Begin PBXFileReference section */
 		B4288F9320CD6A8F002FCDFC /* Errands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Errands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4288F9620CD6A8F002FCDFC /* Errands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Errands.h; sourceTree = "<group>"; };
-		B4288F9720CD6A8F002FCDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4288F9C20CD6A8F002FCDFC /* ErrandsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErrandsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4288FA320CD6A8F002FCDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4288FAD20CD6AE8002FCDFC /* Errands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errands.swift; sourceTree = "<group>"; };
-		B4288FAF20CD6C82002FCDFC /* ErrandsMemoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrandsMemoryTests.swift; sourceTree = "<group>"; };
-		B4288FB020CD6C83002FCDFC /* ErrandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrandsTests.swift; sourceTree = "<group>"; };
+		B497DE2B20D2B3A2009D120B /* Errands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errands.swift; sourceTree = "<group>"; };
+		B497DE2C20D2B3A2009D120B /* Errands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errands.h; sourceTree = "<group>"; };
+		B497DE2D20D2B3A2009D120B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B497DE3220D2B959009D120B /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		B497DE3420D2B959009D120B /* ErrandsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrandsTests.swift; sourceTree = "<group>"; };
+		B497DE3520D2B959009D120B /* ErrandsMemoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrandsMemoryTests.swift; sourceTree = "<group>"; };
+		B497DE3620D2B959009D120B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +58,8 @@
 		B4288F8920CD6A8F002FCDFC = {
 			isa = PBXGroup;
 			children = (
-				B4288F9520CD6A8F002FCDFC /* Errands */,
-				B4288FA020CD6A8F002FCDFC /* ErrandsTests */,
+				B497DE2920D2B3A2009D120B /* Sources */,
+				B497DE3120D2B959009D120B /* Tests */,
 				B4288F9420CD6A8F002FCDFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,22 +73,39 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4288F9520CD6A8F002FCDFC /* Errands */ = {
+		B497DE2920D2B3A2009D120B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B4288F9620CD6A8F002FCDFC /* Errands.h */,
-				B4288FAD20CD6AE8002FCDFC /* Errands.swift */,
-				B4288F9720CD6A8F002FCDFC /* Info.plist */,
+				B497DE2A20D2B3A2009D120B /* Errands */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B497DE2A20D2B3A2009D120B /* Errands */ = {
+			isa = PBXGroup;
+			children = (
+				B497DE2B20D2B3A2009D120B /* Errands.swift */,
+				B497DE2C20D2B3A2009D120B /* Errands.h */,
+				B497DE2D20D2B3A2009D120B /* Info.plist */,
 			);
 			path = Errands;
 			sourceTree = "<group>";
 		};
-		B4288FA020CD6A8F002FCDFC /* ErrandsTests */ = {
+		B497DE3120D2B959009D120B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B4288FB020CD6C83002FCDFC /* ErrandsTests.swift */,
-				B4288FAF20CD6C82002FCDFC /* ErrandsMemoryTests.swift */,
-				B4288FA320CD6A8F002FCDFC /* Info.plist */,
+				B497DE3220D2B959009D120B /* LinuxMain.swift */,
+				B497DE3320D2B959009D120B /* ErrandsTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B497DE3320D2B959009D120B /* ErrandsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B497DE3420D2B959009D120B /* ErrandsTests.swift */,
+				B497DE3520D2B959009D120B /* ErrandsMemoryTests.swift */,
+				B497DE3620D2B959009D120B /* Info.plist */,
 			);
 			path = ErrandsTests;
 			sourceTree = "<group>";
@@ -99,7 +117,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4288FA420CD6A8F002FCDFC /* Errands.h in Headers */,
+				B497DE2F20D2B3A2009D120B /* Errands.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4288FAE20CD6AE8002FCDFC /* Errands.swift in Sources */,
+				B497DE2E20D2B3A2009D120B /* Errands.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4288FB120CD6C83002FCDFC /* ErrandsMemoryTests.swift in Sources */,
-				B4288FB220CD6C83002FCDFC /* ErrandsTests.swift in Sources */,
+				B497DE3820D2B959009D120B /* ErrandsTests.swift in Sources */,
+				B497DE3920D2B959009D120B /* ErrandsMemoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +374,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Errands/Info.plist;
+				INFOPLIST_FILE = Sources/Errands/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +401,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Errands/Info.plist;
+				INFOPLIST_FILE = Sources/Errands/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,7 +421,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ErrandsTests/Info.plist;
+				INFOPLIST_FILE = Tests/ErrandsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -421,7 +439,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ErrandsTests/Info.plist;
+				INFOPLIST_FILE = Tests/ErrandsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
