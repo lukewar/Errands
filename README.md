@@ -10,7 +10,7 @@
 # Errands
 Quick and simple way of running sequential asynchronous tasks.
 
-Errands originated from need to simplify creation of integration tests. Those tests consist of multiple sequential operations, where each step depends on results from previous step. Altho tests use case is not the only one that Errands could be used.
+Need for Errands came while building integration tests suite for [Tunsgten](https://tungstenapp.com) project. Usually those tests consist of multiple sequential operations, where each step depends on results from previous step. Nevertheless testing usecase is not the only one that Errands could be used for.
 
 Note: Errands and [PromisKit](https://github.com/mxcl/PromiseKit) share similarities in functionality. Errands put strong focus on creating custom operations quicker in expense of being less powerful.
 
@@ -29,7 +29,7 @@ Errands().first { (done: @escaping DoneClosure<Void>) in
 }
 ```
 
-It is very easy to pass values between steps. Following example logs in user and loads her contacts.
+True value of Errands comes with easy information passing between steps. Following example logs in an user and loads her contacts.
 
 ```swift
 Errands().first { (done: @escaping DoneClosure<User>) in
@@ -48,10 +48,35 @@ Errands().first { (done: @escaping DoneClosure<User>) in
 ## Installation
 
 #### Cocoapods
+To integrate Errands using [Cocoapods](http://cocoapods.org/), specify it as a dependency in your `Podfile`:
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+  pod 'Errands'
+end
+```
+
+Then, install it by running the following command:
+```shell
+$ pod install
+```
 
 #### Carthage
+To integrate Errands using [Carthage](https://github.com/Carthage/Carthage), specify it as a dependency in your `Cartfile`:
+```
+github "lukewar/Errands" ~> 0.1.0
+```
+Run carthage update to build the framework and drag the built Errands.framework into your Xcode project.
 
 #### Swift Package Manager
+To integrate Errands using [Swift Package Manager](https://swift.org/package-manager/), specify it as a dependency in your `Package.swift`:
+```swift
+dependencies: [
+  .package(url: "https://github.com/lukewar/Errands.git", .upToNextMinor(from: "0.1.0"))
+]
+```
 
 ## Contribution
 
